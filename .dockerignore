@@ -1,0 +1,24 @@
+# Include any files or directories that you don't want to be copied to your
+# container here (e.g., local build artifacts, temporary files, etc.).
+.git
+.github
+.next
+.vscode
+node_modules
+README.md
+.env
+.env.*
+!.env.example
+
+# debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# build outputs
+.vercel
+out
+
+# typescript
+*.tsbuildinfo 
