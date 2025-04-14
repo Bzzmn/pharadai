@@ -50,8 +50,7 @@ RUN echo 'server { \
     location / { \
     root /usr/share/nginx/html; \
     index index.html; \
-    autoindex on; \
-    try_files $uri $uri/ /index.html; \
+    try_files $uri $uri.html $uri/ /index.html; \
     } \
     }' > /etc/nginx/conf.d/default.conf
 
