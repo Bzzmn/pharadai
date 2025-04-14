@@ -1,0 +1,119 @@
+
+
+// history-style1
+.history-style1 {
+    position: relative;
+    background: #F9F9F9;
+
+    @include md {
+        .row {
+            margin-bottom: -15px;
+        }
+    }
+
+    @include sm {
+        .row {
+            margin-bottom: -40px;
+        }
+    }
+}
+
+
+.history-list {
+    position: relative;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 36px;
+    margin-bottom: 0;
+
+    @include lg {
+        margin-top: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 65px;
+        width: 2px;
+        height: 702px;
+        background: #2F2F2F;
+
+        @include lg {
+            height: 872px;
+        }
+
+        @include md {
+            height: 665px;
+        }
+
+        @include xs {
+            height: 928px;
+        }
+
+        @include vxs {
+            display: none;
+        }
+    }
+
+    li {
+        margin-bottom: 49px;
+
+        @include xs {
+            margin-bottom: 15px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.history-content {
+    position: relative;
+    padding: 5px 0 0 167px;
+
+    @include md {
+        padding: 17px 0 17px 167px;
+    }
+
+    @include vxs {
+        padding-left: 0;
+    }
+
+    .date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $title-color;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 131px;
+        width: 131px;
+        height: 131px;
+        text-align: center;
+        border: 1px solid var(--title-color);
+        border-radius: 50%;
+        display: inline-block;
+        background-color: $white-color;
+
+        @include vxs {
+            position: static;
+            margin-bottom: 30px;
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,35 @@
+
+
+/* Aplica tus nuevos colores */
+.btn-style1, .link-btn, .vs-btn {
+  background-color: var(--primary-color);
+}
+
+.footer-wrapper, .header-wrapper {
+  background-color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, .title {
+  color: var(--accent-color);
+}
+
+.container-style1, .header-main {
+    background-color: var(--dark-color);
+}
+
+.faq-img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.chipia {
+  width: 50%!important;
+  height: auto;
+  object-fit: cover;
+  filter: drop-shadow(0 20px 30px rgba(126, 188, 254, 0.8));
+}
+
+.box-chipia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

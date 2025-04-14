@@ -1,0 +1,52 @@
+// .googel-map-section
+.googel-map-section {
+    position: relative;
+
+    .goole-iframe {
+        height: 640px;
+        @include xs {
+            height: 400px;
+        }
+        iframe {
+            height: 100%;
+        }
+    }
+}
+
+.location-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.20);
+    width: 430px;
+    display: flex;
+    align-items: center;
+    padding: 24px 37px 23px;
+
+    @include vxs {
+        flex-wrap: wrap;
+        width: 262px;
+    }
+
+    .map-icon {
+        i {
+            font-size: 32px;
+            color: #000;
+            margin-right: 14px;
+
+            @include vxs {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+}

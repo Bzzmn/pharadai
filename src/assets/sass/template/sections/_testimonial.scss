@@ -1,0 +1,298 @@
+.testmonial-section{
+    position: relative;
+    margin-bottom: -57px;
+}
+
+.testi-slide2 {
+    display: none;
+    &.current {
+        display: block;
+    }
+}
+.testi-content{
+    .title-area {
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 46px;
+        margin-bottom: 38px;
+        @include xs{
+            font-size: 21px;
+            line-height: 34px;
+        }
+    }
+}
+.testi-auther{
+    display: flex;
+    align-items: center;
+    @include vxs{
+        flex-wrap: wrap;
+    }
+}
+.testi-auther-content{
+    margin-left: 29px;
+    @include vxs{
+        margin: 2px 0 0;
+    }
+    .name{
+        color: #000;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 0;
+    }
+    .designation{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        display: inline-block;
+    }
+}
+
+
+// testmonila-style2
+.testmonila-style2{
+    position: relative;
+}
+
+.test-auther{
+    background-color: $theme-color;
+    padding: 68px 81px 46px;
+    @include ml{
+        padding: 68px 55px 46px;
+    }
+    @include lg{
+        padding: 68px 35px 46px;
+    }
+    @include md{
+        text-align: center;
+    }
+    @include vxs{
+        padding: 50px 21px 39px;
+    }
+    img{
+        border-radius: 50%;
+        margin-bottom: 23px;
+    }
+    .name{
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 0;
+        @include vxs{
+            font-size: 30px;
+        }
+    }
+    .designation{
+        color: $title-color;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 40px;
+        display: inline-block;
+        margin-top: -3px;
+    }
+}
+.testi-content2{
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #BABABA;
+    background: $white-color;
+    border-left: 0;
+    padding: 82px 92px 72px 105px;
+    @include ml{
+        padding: 82px 92px 72px 63px;
+    }
+    @include lg{
+        padding: 82px 40px 72px 63px;
+    }
+    @include md{
+        border: 1px solid #BABABA;
+        border-top: 0;
+    }
+    @include sm{
+        flex-wrap: wrap;
+        padding: 58px 40px 37px 45px;
+    }
+    @include vxs{
+        padding: 41px 28px 37px 39px;
+    }
+    p{
+        color: #444;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 46px;
+        margin-left: 38px;
+        margin-bottom: 0;
+        @include lg{
+            font-size: 23px;
+        }
+        @include sm{
+            margin: 20px 0 0;
+        }
+        @include xs{
+            font-size: 19px;
+            line-height: 29px;
+        }
+        @include vxs{
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+}
+
+.testi-img {
+    position: relative;
+    height: 100%;
+    ul {
+        display: flex;
+        flex-wrap:wrap;
+        padding-left: 0;
+        margin:0;
+        @include md {
+            margin-top: 50px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: -140px;
+            right: -152px;
+            width: 547px;
+            height: 547px;
+            background-image: url(../img/testimonial/shape.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            
+            @include xl {
+                right: 0;
+            }
+            
+            @include ml {
+                display: none;
+            }
+        }
+        li {
+            width: 204px;
+            height: 204px;
+            border-radius: 100px;
+            list-style: none;
+            margin:10px;
+            position: absolute;
+            transition:all 0.3s ease;
+            z-index: 99;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: -30px;
+            @include md {
+                position: static;
+                margin-bottom: 40px;
+            }
+            &:hover{
+                &.current {
+                    > img {
+                        transform:scale(1);
+                    }
+                }
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            @include lg {
+                width: 150px;
+                height: 150px;
+            }
+            @include sm {
+                width: calc(100% / 4 - 33px);
+                height: 100px;
+                margin:0;
+                margin-right: 15px;
+            }
+            @include vxs {
+                width: calc(100% / 2 - 33px);
+                margin-bottom: 15px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: $theme-color;
+                opacity: 0;
+                transition:all 0.3s ease;
+                visibility: hidden;
+                z-index: 99;
+                @include md {
+                    display: none;
+                }
+            }
+            &:first-child {
+                top:30px;
+                left: 20px;
+                @include lg {
+                    top: 60px;
+                }
+            }
+            &:nth-child(2) {
+                top: 0;
+                right: 0;
+                @include lg {
+                    top: 20px;
+                }
+            }
+            &:nth-child(3) {
+                bottom: 20px;
+                left: 40px;
+                @include lg  {
+                    bottom: 120px;
+                }
+            }
+            &:nth-child(4) {
+                bottom: 70px;
+                right: 10px;
+                @include lg {
+                    bottom: 200px;
+                }
+            }
+            &.current {
+                width: 230px;
+                height: 230px;
+                @include lg {
+                    width: 180px;
+                    height: 180px;
+                }
+                @include md {
+                    width: 150px;
+                    height: 150px;
+                }
+                @include sm {
+                    height: 100px;
+                    width: auto;
+                }
+                @include vxs {
+                }
+                &:before {
+                    opacity: 0.5;
+                    visibility: visible;
+                }
+            }
+            > img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                transition:all 0.3s ease;
+                object-fit:cover;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@include vxs {
+    .testmonial-section.space + .brand-section.space {
+        padding-top: 40px;
+    }
+}

@@ -1,0 +1,456 @@
+// project-section
+.project-section {
+  position: relative;
+  padding-bottom: 87px;
+}
+.project-content {
+  .project-title {
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    display: inline-block;
+  }
+  h2 {
+    color: $white-color;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 39px;
+    @include md {
+      font-size: 70px;
+    }
+    @include sm {
+      font-size: 56px;
+    }
+    @include xs {
+      font-size: 47px;
+    }
+    @include vxs {
+      font-size: 33px;
+    }
+  }
+}
+.project-info {
+  display: flex;
+  align-items: center;
+  @include md {
+    flex-wrap: wrap;
+  }
+  p {
+    color: #ededed;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-right: 96px;
+    @include md {
+      margin-bottom: 40px;
+      br {
+        display: none;
+      }
+    }
+    @include vxs {
+      margin-right: 0;
+    }
+  }
+  .btn-style1 {
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+.project-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include md {
+    flex-wrap: wrap;
+  }
+  .btn-style1 {
+    margin-top: 10px;
+  }
+}
+
+// project-style2
+.project-style2 {
+  position: relative;
+  .prject-btn-box {
+    @include sm {
+      margin-top: 0;
+    }
+  }
+}
+.project-card2 {
+  margin-bottom: 48px;
+  &:hover {
+    .peoject-img2 {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.peoject-img2 {
+  overflow: hidden;
+  img {
+    height: 410px;
+    transition: all 0.3s ease;
+    width: 100%;
+    object-fit: cover;
+    @include sm {
+      width: 100%;
+    }
+  }
+}
+.project-content2 {
+  margin-top: 20px;
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 8px;
+    a {
+      color: $title-color;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    @include lg {
+      font-size: 32px;
+    }
+    @include vxs {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+  span {
+    position: relative;
+    color: #444;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    display: inline-block;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      width: 30px;
+      height: 1px;
+      background-color: #a3a3a3;
+    }
+  }
+}
+.project-card2.v2 {
+  margin-bottom: 0;
+  @include sm {
+    margin-bottom: 48px;
+  }
+}
+
+// project-detail-section
+.project-detail-section {
+  position: relative;
+}
+.project-info-v2 {
+  .title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    margin-bottom: 9px;
+  }
+  span {
+    position: relative;
+    color: #444;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-left: 40px;
+    margin-bottom: 34px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      width: 30px;
+      height: 1px;
+      background-color: #a3a3a3;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 36px;
+  }
+}
+
+// project-detail-section
+.project-detail-section {
+  position: relative;
+}
+.project-detail-content {
+  display: flex;
+  margin-bottom: 80px;
+  @include md {
+    flex-wrap: wrap;
+  }
+}
+.project-info-v2 {
+  width: 50%;
+  margin-right: 16px;
+  @include md {
+    width: 100%;
+  }
+  .title {
+    @include xs {
+      font-size: 50px;
+    }
+    @include vxs {
+      font-size: 38px;
+      margin-bottom: 0;
+    }
+  }
+}
+// project-list
+.project-list {
+  padding-left: 0;
+  list-style: none;
+  border: 1px solid #cbcbcb;
+  background: $white-color;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+  padding: 26px 28px 22px;
+  width: 50%;
+  margin-left: 16px;
+  @include md {
+    width: 100%;
+  }
+  @include md {
+    margin-left: 0;
+  }
+  li {
+    color: $title-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    padding: 18px 53px;
+    margin-bottom: 13px;
+    @include xs {
+      padding: 18px 41px;
+    }
+    @include vxs {
+      padding: 18px 40px 18px 20px;
+    }
+    span {
+      width: 125px;
+      display: inline-block;
+      @include xs {
+        display: block;
+        width: 100%;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:first-child,
+    &:nth-child(3) {
+      background: rgba(190, 210, 57, 0.8);
+    }
+  }
+}
+
+// project-content3
+.project-content3 {
+  margin-top: 60px;
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+}
+.prject-list-box {
+  display: flex;
+  margin: 48px 0 59px;
+  @include md {
+    flex-wrap: wrap;
+  }
+  .ser-details-list.v4 {
+    &:first-child {
+      margin-right: 180px;
+      @include lg {
+        margin-right: 17px;
+      }
+    }
+  }
+}
+.ser-details-list.v4 {
+  margin: 0;
+}
+.project-gallery-box {
+  margin-bottom: 57px;
+}
+.pro-gallery-img {
+  margin-bottom: 31px;
+  overflow: hidden;
+  height: 418px;
+  @include lg {
+    height: 250px;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+}
+.project-content-v3 {
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 31px;
+    @include sm {
+      line-height: 50px;
+    }
+    @include vxs {
+      line-height: 34px;
+      font-size: 28px;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+// feature-info two
+.feature-info.two {
+  padding-top: 57px;
+}
+.post-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #5f5f5f;
+  background: $white-color;
+  padding: 10px;
+  margin-top: 120px;
+  @include lg {
+    margin-top: 90px;
+  }
+  @include md {
+    margin-top: 40px;
+  }
+  @include sm {
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 78px;
+    background: #767575;
+    @include md {
+      display: none;
+    }
+  }
+}
+.post-control-info {
+  display: flex;
+  align-items: center;
+  @include vxs {
+    flex-wrap: wrap;
+  }
+  &:last-child {
+    @include sm {
+      margin-top: 23px;
+      margin-left: auto;
+    }
+  }
+}
+.post-control-content {
+  margin-left: 34px;
+  @include md {
+    margin-left: 15px;
+  }
+  @include vxs {
+    margin-left: 0;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 0;
+    @include md {
+      font-size: 26px;
+    }
+    a {
+      color: $title-color;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}
+.post-control-content.v2 {
+  text-align: right;
+  margin: 0 34px 0 0;
+  @include md {
+    margin-right: 15px;
+  }
+  @include vxs {
+    text-align: left;
+  }
+}
+
+.prject-btn-box {
+  margin-top: 50px;
+}
+
+.project-bg1 {
+  background-color: #002314;
+  overflow: hidden;
+}
+.faq-anim {
+  &.vs2 {
+    img {
+      right: 16px;
+      top: -102px;
+      left: auto;
+      mix-blend-mode: multiply;
+    }
+  }
+}

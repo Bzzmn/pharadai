@@ -1,0 +1,449 @@
+// banner-style1
+.banner-style1 {
+  position: relative;
+  background-color: $theme-color2;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1022.196px;
+    height: 552.232px;
+    background-image: url(../img/hero/layer.png);
+    @include lg {
+      display: none;
+    }
+  }
+  .hero-box {
+    display: flex;
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+.hero-content {
+  padding: 141px 0 77px;
+  @include md {
+    padding: 100px 0 77px;
+  }
+  @include sm {
+    padding: 100px 0;
+  }
+  @include vxs {
+    padding: 60px 0;
+  }
+  .title {
+    position: relative;
+    color: $theme-color;
+    font-size: 110px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 49px;
+    z-index: 99;
+    @include lg {
+      font-size: 82px;
+    }
+    @include sm {
+      font-size: 75px;
+    }
+    @include xs {
+      font-size: 60px;
+      line-height: 70px;
+    }
+    @include vxs {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 32px;
+    }
+    img {
+      margin-left: 21px;
+      margin-top: -10px;
+      @include sm {
+        display: none;
+      }
+    }
+  }
+}
+.hero-img {
+  margin-right: 54px;
+  height: 136px;
+  overflow: hidden;
+  @include md {
+    margin: 0 0 30px;
+  }
+  @include vxs {
+    display: none;
+  }
+  img {
+    border-radius: 100px;
+  }
+}
+.hero-info {
+  max-width: 476px;
+  @include lg {
+    padding-left: 30px;
+  }
+  @include vxs {
+    padding-left: 0;
+  }
+  p {
+    position: relative;
+    color: $white-color;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 42px;
+    margin-bottom: 37px;
+    z-index: 999;
+    @include vxs {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+// hero-wapper-two
+.hero-wapper-two {
+  position: relative;
+  padding: 292px 0 135px;
+  @include lg {
+    padding: 176px 0 106px;
+  }
+  @include md {
+    padding-top: 135px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1007px;
+    height: 600px;
+    background-image: url(../img/bg/hero-circle.png);
+    @include lg {
+      display: none;
+    }
+  }
+}
+.hero-content-two {
+  position: relative;
+  z-index: 99;
+  .title {
+    color: $white-color;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 25px;
+    @include ml {
+      font-size: 74px;
+      line-height: 84px;
+    }
+    @include md {
+      font-size: 63px;
+      line-height: 73px;
+      max-width: 80%;
+    }
+    @include sm {
+      font-size: 47px;
+      line-height: 57px;
+    }
+    @include xs {
+      max-width: 100%;
+    }
+    @include vxs {
+      font-size: 44px;
+      line-height: 50px;
+    }
+  }
+  p {
+    color: #cfcfcf;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 42px;
+    padding-right: 60px;
+    margin-bottom: 31px;
+    @include sm {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include vxs {
+      padding-right: 0;
+    }
+  }
+}
+
+.hero-img-two {
+  position: absolute;
+  bottom: 69px;
+  right: 289px;
+  @include ml {
+    right: 148px;
+  }
+  @include lg {
+    display: none;
+  }
+  img {
+    border-radius: 50%;
+  }
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: $title-color;
+    width: 216px;
+    height: 216px;
+    line-height: 216px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(189, 210, 57, 0.9);
+    z-index: 99;
+    &:hover {
+      color: $white-color;
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+.anim-image {
+  position: absolute;
+  top: -100px;
+  left: -113px;
+  border-radius: 0 !important;
+}
+
+// banner-contact
+.banner-contact {
+  position: relative;
+  padding-bottom: 97px;
+  margin-top: 120px;
+  @include md {
+    margin-top: 0;
+  }
+}
+.banner-box {
+  position: relative;
+  padding: 99px 102px 81px;
+  margin-top: 57px;
+  @include ml {
+    padding: 99px 53px 81px;
+  }
+  @include xs {
+    padding: 70px 27px 58px;
+  }
+}
+.banner-contact-content {
+  .title {
+    color: $white-color;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 80px;
+    margin-bottom: 34px;
+    @include md {
+      font-size: 76px;
+    }
+    @include sm {
+      font-size: 63px;
+      line-height: 69px;
+    }
+    @include xs {
+      font-size: 49px;
+      line-height: 54px;
+    }
+    @include vxs {
+      font-size: 37px;
+      line-height: 46px;
+      margin-bottom: 22px;
+    }
+  }
+  span {
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    display: block;
+  }
+}
+.banner-contact-img {
+  position: absolute;
+  top: -100px;
+  right: 11px;
+  @include lg {
+    display: none;
+  }
+}
+.contact-btn {
+  color: $theme-color;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 68px;
+  text-decoration-line: underline;
+  display: inline-block;
+  margin-top: -4px;
+  &:hover {
+    color: $theme-color;
+  }
+  @include xs {
+    font-size: 32px;
+  }
+  @include vxs {
+    font-size: 22px;
+  }
+}
+
+// hero-wapper-three
+.hero-wapper-three {
+  position: relative;
+  padding: 196px 0 0;
+  @include md {
+    padding-top: 0;
+    margin-bottom: 0px;
+  }
+}
+.banner_img {
+  text-align: right;
+  @include ml {
+    max-width: 70%;
+    margin-left: auto;
+  }
+  @include md {
+    margin-top: 50px;
+    display: none;
+  }
+  img {
+    border-radius: 50%;
+    @include md {
+      width: 100%;
+    }
+  }
+}
+
+.header-layout2 .will-sticky {
+  .sticky-active {
+    background: #000;
+  }
+  .header-main-two {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.hero-slide {
+  position: relative;
+  padding-bottom: 190px;
+  @include md {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+.hero-slider-wrapper {
+  position: relative;
+  padding-bottom: 30px;
+  .sec-btns {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: -100px;
+    z-index: 99;
+    @include ml {
+      margin-top: -60px;
+    }
+    @include lg {
+      margin-top: 0;
+    }
+    @include md {
+      top: auto;
+      transform: unset;
+      bottom: 50px;
+    }
+    button {
+      background: transparent;
+      border: 0;
+      height: 50px;
+      width: 115px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      margin-right: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      @include vxs {
+        width: 50px;
+      }
+      &:hover {
+        background-color: $theme-color;
+        i {
+          color: #000;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        line-height: unset;
+        background-color: transparent;
+        color: #fff;
+        font-size: 32px;
+        transition: all 0.3s ease;
+        @include vxs {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.banner_content {
+  .title {
+    color: $white-color;
+    font-size: 80px;
+    line-height: 90px;
+    margin-bottom: 5px;
+    @include sm {
+      font-size: 60px;
+      line-height: 70px;
+    }
+  }
+  .category-name {
+    position: relative;
+    color: #c7c7c7;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 30px;
+      height: 1px;
+      background-color: #a3a3a3;
+    }
+  }
+  .ab-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 400px;
+    @include ml {
+      height: 250px;
+    }
+    @include lg {
+      left: auto;
+      right: 0;
+    }
+    @include md {
+      display: none;
+    }
+  }
+}

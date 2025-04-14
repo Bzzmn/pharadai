@@ -1,0 +1,133 @@
+// .brand-section
+.brand-section {
+  position: relative;
+}
+
+.brand-title {
+  span {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 40px;
+    @include md {
+      margin-bottom: 45px;
+      line-height: 40px;
+      font-size: 30px;
+    }
+  }
+}
+
+.brand-box {
+  border: 1px solid #5b5b5b;
+  background: #fff;
+  height: 148px;
+  line-height: 148px;
+  text-align: center;
+  overflow: hidden;
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    transition: all 0.3s ease;
+  }
+}
+
+// brand style2
+.brand-style2 {
+  position: relative;
+
+  @include xl {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1467px;
+    height: 734px;
+    background-image: url(../img/bg/brand-bg2.png);
+    z-index: -1;
+    background-repeat: no-repeat;
+
+    @include xl {
+      display: none;
+    }
+  }
+}
+
+.vs-hero-bottom-img {
+  background-position: top center;
+  background-size: cover;
+  object-fit: cover;
+  width: 670px;
+  height: 890px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.vs-hero-bottom-img video {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+// .brand-title
+.brand-title-two {
+  span {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    display: inline-block;
+    z-index: 99;
+
+    @include md {
+      line-height: 41px;
+      padding: 0 50px;
+    }
+
+    @include vxs {
+      line-height: 34px;
+      padding: 0 39px;
+      font-size: 22px;
+    }
+  }
+}
+
+// brand-img2
+.brand-img2 {
+  text-align: center;
+  height: 135px;
+  line-height: 135px;
+  border: 1px solid #b0b0b0;
+  background: $white-color;
+  overflow: hidden;
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    transition: all 0.3s ease;
+  }
+
+  @include xl {
+    margin: 1px;
+  }
+}

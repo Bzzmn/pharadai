@@ -1,0 +1,451 @@
+.circle_percent {
+  font-size: 260px;
+  width: 260px;
+  height: 260px;
+  position: relative;
+  background: #f4ffca;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+.circle_inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 260px;
+  clip: rect(0 260px 260px 0.5em);
+}
+.round_per {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 260px;
+  background: var(--theme-color);
+  clip: rect(0 260px 260px 0.5em);
+  transform: rotate(180deg);
+  transition: 1.05s;
+}
+.percent_more .circle_inner {
+  clip: rect(0 0.5em 1em 0em);
+}
+.percent_more:after {
+  position: absolute;
+  left: 0.5em;
+  top: 0em;
+  right: 0;
+  bottom: 0;
+  background: var(--theme-color);
+  content: "";
+}
+.circle_inbox {
+  position: absolute;
+  top: 10px;
+  width: 240px;
+  height: 240px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 50%;
+}
+.percent_text {
+  position: absolute;
+  margin-top: -9px;
+  font-size: 70px;
+  font-weight: 700;
+  color: $title-color;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+// team-section
+.team-style1 {
+  position: relative;
+  @include md {
+    padding-bottom: 20px;
+  }
+  @include md {
+    .row {
+      margin-bottom: -50px;
+    }
+  }
+  @include xs {
+    padding-bottom: 0;
+  }
+}
+
+.team-card {
+  position: relative;
+  display: flex;
+  @include md {
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  @include sm {
+    display: block;
+  }
+  @include xs {
+    flex-wrap: wrap;
+  }
+  &:hover {
+    .social-links-ten {
+      transform: scaleY(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    .share-icon-ten {
+      border-color: transparent;
+    }
+  }
+}
+.share-icon-ten {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 58px;
+  height: 55px;
+  line-height: 58px;
+  text-align: center;
+  font-size: 18px;
+  color: $title-color;
+  background: $theme-color;
+  transition: all 300ms ease;
+  z-index: 3;
+  @include sm {
+    position: static;
+  }
+  @include xs {
+    bottom: 0;
+  }
+  &:hover {
+    background-color: $theme-color2;
+    color: $white-color;
+  }
+}
+.social-links-ten {
+  position: absolute;
+  bottom: 40px;
+  left: 58px;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms ease;
+  transform-origin: right;
+  background-color: $theme-color;
+  @include xs {
+    bottom: 0;
+  }
+  a {
+    position: relative;
+    text-align: center;
+    width: 58px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 20px;
+    color: $title-color;
+    transition: all 300ms ease;
+    border-left: 1px solid #a0a0a0;
+    &:hover {
+      background-color: $theme-color2;
+      color: $white-color;
+    }
+  }
+  @include sm {
+    bottom: 0;
+  }
+}
+.team-img {
+  position: relative;
+  padding: 0 44px 40px 40px;
+  @include lg {
+    padding: 0 30px 0 0;
+  }
+  @include sm {
+    padding-right: 0;
+  }
+  @include xs {
+    width: 100%;
+    padding-right: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 365px;
+    height: 384px;
+    background: #f5f5f5;
+    z-index: -11;
+    @include lg {
+      display: none;
+    }
+  }
+  img {
+    @include md {
+      width: 430px;
+      height: 464px;
+      object-fit: cover;
+    }
+    @include sm {
+      width: auto;
+      object-fit: contain;
+    }
+    @include xs {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.team-content {
+  position: relative;
+  padding: 68px 0 0 0;
+  @include xs {
+    width: 100%;
+  }
+  @include lg {
+    padding-top: 35px;
+  }
+  @include md {
+    padding-top: 30px;
+  }
+  .designation {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 35px;
+    display: inline-block;
+  }
+  .name {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-bottom: 20px;
+    @include sm {
+      font-size: 36px;
+      line-height: 44px;
+      br {
+        display: none;
+      }
+    }
+    @include xs {
+      font-size: 32px;
+    }
+    a {
+      color: #000;
+      display: block;
+      &:hover {
+        color: var(--theme-color3);
+      }
+    }
+  }
+  .nmbr {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    @include lg {
+      font-size: 16px;
+    }
+    @include sm {
+      display: block;
+      margin-bottom: 30px;
+    }
+    a {
+      color: $title-color;
+    }
+  }
+}
+.team-anim {
+  position: absolute;
+  top: 75px;
+  right: 170px;
+  @include xl {
+    display: none;
+  }
+}
+
+// team-style2
+.team-style2 {
+  position: relative;
+}
+
+.team-card2 {
+  position: relative;
+  display: flex;
+  @include md {
+    flex-wrap: wrap;
+  }
+}
+.social-links11 {
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  transition: all 400ms ease;
+  span {
+    font-size: 18px;
+    font-weight: 500;
+    color: $title-color;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    @include vxs {
+      font-size: 16px;
+      margin: 0 17px 0 0;
+    }
+  }
+  a {
+    position: relative;
+    text-align: center;
+    width: 58px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 20px;
+    color: $title-color;
+    transition: all 300ms ease;
+    border-right: 1px solid #a0a0a0;
+    background-color: $theme-color;
+    &:last-child {
+      border-right: 0;
+    }
+    &:hover {
+      background-color: $theme-color2;
+      color: $white-color;
+    }
+  }
+}
+.team-img2 {
+  position: relative;
+  padding: 0 93px 0 88px;
+  margin-bottom: 55px;
+  @include lg {
+    margin-bottom: 0;
+    padding: 0 40px 0 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    width: 860px;
+    height: 651px;
+    background: #f5f5f5;
+    z-index: -11;
+    @include lg {
+      display: none;
+    }
+  }
+  @include md {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.team-content2 {
+  position: relative;
+  padding: 127px 0 0 0;
+  @include lg {
+    padding: 20px 0 0;
+  }
+  .designation {
+    color: $title-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 52px;
+    display: inline-block;
+  }
+  .name {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-bottom: 46px;
+    @include xs {
+      font-size: 40px;
+      margin-bottom: 26px;
+    }
+    @include vxs {
+      font-size: 32px;
+      margin-bottom: 9px;
+      line-height: 43px;
+    }
+    a {
+      color: $title-color;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  .nmbr {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    a {
+      color: $title-color;
+    }
+  }
+}
+.team-contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 64px;
+  li {
+    position: relative;
+    color: $title-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    display: flex;
+    margin-bottom: 27px;
+    @include vxs {
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    span {
+      display: inline-block;
+      @include lg {
+        br {
+          display: none;
+        }
+      }
+      @include xs {
+        width: 273px;
+      }
+    }
+    sub {
+      display: inline-block;
+      width: 131px;
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 10px;
+      @include vxs {
+        line-height: 36px;
+      }
+    }
+    i {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      font-size: 34px;
+      color: #000;
+      width: 67px;
+      height: 72px;
+      line-height: 72px;
+      text-align: center;
+      background-color: $theme-color;
+      margin-right: 24px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

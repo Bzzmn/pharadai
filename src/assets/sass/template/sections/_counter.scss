@@ -1,0 +1,56 @@
+// fun-fact-style1
+.fun-fact-style1 {
+  position: relative;
+
+  .row {
+    @include lg {
+      margin-bottom: -50px;
+    }
+  }
+}
+
+.fact-counter {
+  border-top: 10px solid rgba(255, 255, 255, 0.05);
+  padding: 70px 0 0;
+}
+
+.counter-block {
+  @include lg {
+    margin-bottom: 50px;
+  }
+}
+
+.content {
+  .persent {
+    border-bottom: 1px solid #a6a6a6;
+    margin-bottom: 2px;
+
+    .counter1 {
+      color: $theme-color;
+      font-size: 120px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      @include vxs {
+        font-size: 60px;
+      }
+    }
+
+    .persent-tag {
+      color: $theme-color;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  .counter-title {
+    color: $white-color;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 19px;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,51 @@
+// client-section
+.client-section {
+    background-color: $theme-color;
+    padding: 97px 0 96px;
+    position: relative;
+    overflow: hidden;
+
+    .marquee2 {
+        display: flex;
+        align-items: center;
+
+        >div {
+            display: flex;
+        }
+    }
+
+    .js-marquee {
+        display: flex;
+        align-items: center;
+
+        >div {
+            -webkit-text-stroke-width: 2;
+            -webkit-text-stroke-color: #000;
+            font-family: Epilogue;
+            font-size: 100px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            padding: 0 50px;
+            color: $title-color;
+            -webkit-text-stroke-width: 2;
+            -webkit-text-stroke-color: #000;
+            position: relative;
+            @include vxs {
+                font-size: 60px;
+                line-height: 70px;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -8px;
+                width: 20px;
+                height: 20px;
+                background-image: url(../img/breadcurmb/star2.png);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+// feature-info
+.feature-info {
+  position: relative;
+  padding: 93px 0 0;
+  .title {
+    font-size: 40px;
+  }
+  .title.v2 {
+    margin-bottom: 33px;
+    @include vxs {
+      font-size: 33px;
+    }
+    @include vxs {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+  }
+}
+.feature-card {
+  position: relative;
+  background: $white-color;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+  padding: 53px 47px 99px;
+  margin-bottom: 67px;
+  @include lg {
+    padding: 53px 23px 99px;
+  }
+  @include md {
+    margin-bottom: 100px;
+  }
+  .feature-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 22px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+}
+.feature-icon {
+  position: absolute;
+  bottom: -67px;
+  left: 48px;
+  width: 133px;
+  height: 133px;
+  line-height: 133px;
+  text-align: center;
+  background-color: $theme-color;
+  border-radius: 50%;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  @include vxs {
+    left: 23px;
+  }
+}

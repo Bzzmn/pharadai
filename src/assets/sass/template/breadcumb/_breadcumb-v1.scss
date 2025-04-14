@@ -1,0 +1,124 @@
+// breadcumb-content
+.breadcumb-wrapper {
+  position: relative;
+  background-color: $theme-color2;
+  padding: 190px 0 40px;
+  @include md {
+    padding-top: 90px;
+  }
+  @include sm {
+    padding: 85px 0 50px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1022.196px;
+    height: 552.232px;
+    background-image: url(../img/hero/layer.png);
+  }
+}
+.breadcumb-content {
+  position: relative;
+  z-index: 9;
+  p {
+    color: $white-color;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 42px;
+    margin-bottom: 84px;
+    max-width: 50%;
+    @include lg {
+      max-width: 70%;
+    }
+    @include md {
+      max-width: 100%;
+    }
+    @include sm {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 60px;
+    }
+    @include xs {
+      font-size: 16px;
+    }
+  }
+}
+.breadcumb-title {
+  color: $white-color;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 29px;
+  @include lg {
+    font-size: 64px;
+  }
+  @include xs {
+    font-size: 44px;
+  }
+}
+.breadcumb-menu {
+  position: relative;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  align-items: center;
+  @include vxs {
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+  li {
+    position: relative;
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 53px;
+    @include vxs {
+      margin-bottom: 15px;
+    }
+    a {
+      color: $white-color;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    @include vxs {
+      margin-right: 47px;
+    }
+    &:last-child {
+      margin-right: 0;
+      &::before {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      padding-left: 30px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 19px;
+        height: 19px;
+        border: 1px solid $theme-color;
+        border-radius: 50%;
+        margin-top: -2px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -30px;
+      height: 2px;
+      width: 7px;
+      background-color: $white-color;
+    }
+  }
+}
